@@ -5,9 +5,11 @@ def rotate(array, rotateBy)
 		rotateBy = rotateBy%array.length
 	end
 
-	sliceAt = (array.length)-rotateBy
+	slice1Len = (array.length)-rotateBy
+	sliceAt = slice1Len
+	slice2Len = array.length - slice1Len
 
-	array = array[sliceAt, (array.length-1)] + array[0, sliceAt]
+	array = array[sliceAt, slice2Len] + array[0, slice1Len]
 end
 
 
